@@ -1,4 +1,5 @@
 import Sequelize from "sequelize";
+import pg from 'pg'; 
 import getUserModel from "./user";
 import getMessageModel from "./message";
 
@@ -9,7 +10,7 @@ if (!process.env.POSTGRES_URL) {
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
   dialect: 'postgres',
   protocol: 'postgres',
-  dialectModule: pg,
+  dialectModule: pg, 
   dialectOptions: {
     ssl: {
       require: true,
