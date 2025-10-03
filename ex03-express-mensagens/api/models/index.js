@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 import pg from 'pg'; 
 import getUserModel from "./user";
 import getMessageModel from "./message";
-import getTarefaModel from "./tarefa"; 
+import getTarefaModel from "./tarefa.js";
 
 if (!process.env.POSTGRES_URL) {
   throw new Error('A variável de ambiente POSTGRES_URL não está definida.');
